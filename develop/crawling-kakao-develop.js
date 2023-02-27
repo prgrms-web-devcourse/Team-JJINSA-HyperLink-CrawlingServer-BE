@@ -1,5 +1,9 @@
+const utils = require('../utils.js');
 const axios = require('axios');
 const cheerio = require('cheerio');
+const amqp = require('amqplib');
+
+const MQ_URL = 'amqp://guest:guest@127.0.0.1';
 
 async function main() {
     resultList = []
@@ -29,4 +33,11 @@ async function main() {
     return resultList;
 }
 main()
-.then(response => console.log(response));
+.then(async responses => {
+    console.log(responses.length);
+    const connect = await amqp.connect(MQ_URL);
+
+    await utils.connectToChannelAndPublish(connect, responses);
+
+    await connect.close();
+});

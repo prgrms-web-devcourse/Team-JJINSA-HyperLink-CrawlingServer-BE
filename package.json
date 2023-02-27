@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "amqplib": "^0.10.3",
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.9",
     "date-fns": "^2.21.1",
