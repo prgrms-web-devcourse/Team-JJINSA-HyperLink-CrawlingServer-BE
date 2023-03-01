@@ -33,8 +33,8 @@ async function main() {
                 contentImgLink: 
                     elem.post_thumbnail_url != undefined  ? 
                     elem.post_thumbnail_url : "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_vogue.png",
-                category: "fashion",
-                creator: "VOGUE 패션 매거진"
+                categoryName: "fashion",
+                creatorName: "VOGUE 패션 매거진"
             })
         });
     }

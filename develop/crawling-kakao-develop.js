@@ -23,8 +23,8 @@ async function main() {
                 title:$(elem).find(".elementor-post__text .elementor-post__title a").text().trim(),
                 link: $(elem).find(".elementor-post__text .elementor-post__title a").attr("href"),
                 contentImgLink: "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo-kakao-tech.png",
-                category: "develop",
-                creator: "카카오 기술 블로그"
+                categoryName: "develop",
+                creatorName: "카카오 기술 블로그"
             })
             console.log("date : " + $(elem).find(".elementor-post__text .elementor-post-date").text());
         });

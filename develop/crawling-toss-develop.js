@@ -24,8 +24,8 @@ async function main() {
                 $(elem).find("img").attr("srcset") != undefined  ? 
                 $(elem).find("img").attr("srcset").split(' ')[0] : 
                 "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_toss.png",
-            category: "develop",
-            creator: "토스 기술 블로그"
+            categoryName: "develop",
+            creatorName: "토스 기술 블로그"
         })
     });
     return resultList;

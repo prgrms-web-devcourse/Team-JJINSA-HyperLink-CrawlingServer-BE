@@ -24,8 +24,8 @@ async function main() {
                 $(elem).find("span.post-thumb").attr("style") != undefined  ? 
                 "https://helloworld.kurly.com" + $(elem).find("span.post-thumb").attr("style").split('\'')[1] : 
                 "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_sns_marketkurly.jpg",
-            category: "develop",
-            creator: "마켓컬리 기술 블로그"
+            categoryName: "develop",
+            creatorName: "마켓컬리 기술 블로그"
         })
     });
     return resultList;

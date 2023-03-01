@@ -23,8 +23,8 @@ async function main() {
                 elem.postImage != undefined ? 
                 "https://d2.naver.com" + elem.postImage : 
                 "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_naver_d2.jpg",
-            category: "develop",
-            creator: "네이버 D2 기술 블로그"
+            categoryName: "develop",
+            creatorName: "네이버 D2 기술 블로그"
         })
     });
     return resultList;

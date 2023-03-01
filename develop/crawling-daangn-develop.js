@@ -39,8 +39,8 @@ async function main() {
                     $(elem).find(".postArticle-content.js-postField").find(".section-content").find(".section-inner.sectionLayout--insetColumn").find("#previewImage").find(".graf-image").attr("src") != undefined ? 
                     $(elem).find(".postArticle-content.js-postField").find(".section-content").find(".section-inner.sectionLayout--insetColumn").find("#previewImage").find(".graf-image").attr("src") : 
                         "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_daangn.png",
-                    category: "develop",
-                    creator: "당근마켓 기술 블로그"
+                    categoryName: "develop",
+                    creatorName: "당근마켓 기술 블로그"
                 })
             });
         }
