@@ -9,8 +9,8 @@ exports.connectToChannelAndPublish = async function(connect, responses) {
         const channel = await connect.createConfirmChannel();
         console.log(responses[i]);
         publishToChannel(channel, {
-            routingKey : 'hello',
-            exchangeName : 'crawling-test',
+            routingKey : 'hyperlink',
+            exchangeName : 'crawling-prod',
             data: responses[i]
         });
         await channel.close();
