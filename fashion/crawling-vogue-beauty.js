@@ -17,7 +17,7 @@ async function main() {
                 paged: pageNum,
                 tax1_slug: 'beauty',
                 tax2_slug: 'beauty-trend',
-                term2_id: '42',
+                term2_id: '47',
                 key:'value',
             },
             headers: {
