@@ -62,11 +62,9 @@ async function main() {
 }
 main()
 .then(async responses => {
-    console.log(responses.length);
-    // const connect = await amqp.connect(MQ_URL);
+    const connect = await amqp.connect(MQ_URL);
 
-    // await utils.connectToChannelAndPublish(connect, responses);
+    await utils.connectToChannelAndPublish(connect, responses);
 
-    // await connect.close();
-    console.log(responses.length);
+    await connect.close();
 });

@@ -10,7 +10,7 @@ exports.connectToChannelAndPublish = async function(connect, responses) {
         console.log(responses[i]);
         publishToChannel(channel, {
             routingKey : 'hello',
-            exchangeName : 'crawling-test',
+            exchangeName : 'crawling-dev',
             data: responses[i]
         });
         await channel.close();
