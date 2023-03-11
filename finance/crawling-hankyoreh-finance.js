@@ -21,7 +21,7 @@ async function main() {
         link: 'https://www.hani.co.kr' + $(elem).find('a').attr('href'),
         contentImgLink: $(elem).find('img').attr('src'),
         categoryName: 'finance',
-        creatorName: 'hankyoreh',
+        creatorName: '한겨레 경제',
       });
     });
   }
