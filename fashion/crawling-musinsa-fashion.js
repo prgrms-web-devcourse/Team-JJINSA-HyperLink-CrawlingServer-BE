@@ -22,7 +22,7 @@ async function main() {
         title: elem.find('h3').text(),
         link: elem.children('a').attr('href'),
         contentImgLink: elem.find('a span.imgBox img').attr('src'),
-        categoryName: 'fashion',
+        categoryName: 'beauty',
         creatorName: elem.find('div.info div.dateLine span.brand').text(),
       });
     });
