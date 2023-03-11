@@ -9,7 +9,7 @@ async function main() {
 
   for (let pageNum = 1; pageNum <= 12; pageNum++) {
     const response = await axios.get(
-      'https://www.musinsa.com/mz/news/fashion?p=' + pageNum
+      'https://www.musinsa.com/mz/news/beauty?p=' + pageNum
     );
 
     const $ = cheerio.load(response.data);
@@ -22,7 +22,7 @@ async function main() {
         title: elem.find('h3').text(),
         link: elem.children('a').attr('href'),
         contentImgLink: elem.find('a span.imgBox img').attr('src'),
-        categoryName: 'fashion',
+        categoryName: 'beauty',
         creatorName: elem.find('div.info div.dateLine span.brand').text(),
       });
     });
