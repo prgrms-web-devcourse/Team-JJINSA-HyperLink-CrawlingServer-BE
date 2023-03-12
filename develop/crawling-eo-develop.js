@@ -34,7 +34,7 @@ const run = async () => {
                     link: youtubeDefaultURL + link,
                     contentImgLink: thumbnailLink,
                     categoryName: "develop",
-                    creatorName: "개발바닥"
+                    creatorName: "eo"
                 })
             })
         })
