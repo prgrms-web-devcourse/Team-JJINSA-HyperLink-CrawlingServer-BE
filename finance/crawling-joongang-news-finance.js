@@ -28,7 +28,7 @@ async function main() {
           ? $img.attr("src")
           : "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_joongang_finance.png",
       categoryName: "finance",
-      creatorName: "중앙 일보",
+      creatorName: "중앙 일보 경제",
     });
   });
 
