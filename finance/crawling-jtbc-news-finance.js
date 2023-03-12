@@ -30,7 +30,7 @@ async function main(page) {
           ? $img.attr("src")
           : "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_jtbc_finance.png",
       categoryName: "finance",
-      creatorName: "jtbc",
+      creatorName: "jtbc 경제",
     });
   });
 
