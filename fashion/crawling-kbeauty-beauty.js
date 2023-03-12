@@ -30,7 +30,7 @@ async function main() {
           ? $img.attr("src")
           : "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_kbeauty_fashion.png",
       categoryName: "beauty",
-      creatorName: "k-beauty",
+      creatorName: "k-beauty 뷰티",
     });
   });
   return resultList;

@@ -29,8 +29,8 @@ async function main() {
         $img.attr("src") != undefined
           ? $img.attr("src")
           : "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_kbeauty_fashion.png",
-      categoryName: "fashion",
-      creatorName: "k-beauty",
+      categoryName: "beauty",
+      creatorName: "k-beauty 패션",
     });
   });
   return resultList;
