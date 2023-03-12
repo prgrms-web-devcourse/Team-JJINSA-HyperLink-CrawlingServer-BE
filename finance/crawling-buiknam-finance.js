@@ -35,7 +35,7 @@ const run = async () => {
           link: youtubeDefaultURL + link,
           contentImgLink: thumbnailLink,
           categoryName: "finance",
-          creatorName: "부읽남TV_내집마련부터건물주까지",
+          creatorName: "부읽남TV 내집마련부터건물주까지",
         });
       });
     });
