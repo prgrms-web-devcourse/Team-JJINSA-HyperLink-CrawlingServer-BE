@@ -35,7 +35,7 @@ const run = async () => {
           link: youtubeDefaultURL + link,
           contentImgLink: thumbnailLink,
           categoryName: "finance",
-          creatorName: "삼프로TV_경제의신과함께 ",
+          creatorName: "삼프로TV 경제의신과함께 ",
         });
       });
     });
