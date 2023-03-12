@@ -45,29 +45,3 @@ main().then(async (responses) => {
 
   // await connect.close();
 });
-
-// async function recentMain() {
-//   const response = await axios.get("https://www.yna.co.kr/economy/all/1");
-//   const $ = cheerio.load(response.data);
-//   const $imgCon = $(".img-con");
-//   resultList = [];
-
-//   $imgCon.each((index, elem) => {
-//     const $a = $(elem).find("a");
-//     const $img = $(elem).find("a img");
-
-//     resultList.push({
-//       title: $img.attr("alt"),
-//       link: "https:" + $a.attr("href"),
-//       contentImgLink:
-//         $img.attr("src") != undefined
-//           ? "https:" + $img.attr("src")
-//           : "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_yunhap_finance.png",
-//       categoryName: "finance",
-//       creatorName: "연합 뉴스",
-//     });
-//   });
-
-//   console.log(resultList);
-//   return resultList;
-// }
