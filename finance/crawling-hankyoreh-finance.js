@@ -19,7 +19,7 @@ async function main() {
       resultList.push({
         title: $(elem).find('div.article-area h4 a').text(),
         link: 'https://www.hani.co.kr' + $(elem).find('a').attr('href'),
-        contentImgLink: $(elem).find('img').attr('src'),
+        contentImgLink: $(elem).find('img').attr('src') != undefined ? $(elem).find('img').attr('src') : 'https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/creator-logo-image/logo_hankyoreh_creator.jpg',
         categoryName: 'finance',
         creatorName: '한겨레 경제',
       });
@@ -30,8 +30,7 @@ async function main() {
 }
 
 main().then(async (responses) => {
-  console.log(responses);
-  //const connect = await amqp.connect(MQ_URL);
-  //await utils.connectToChannelAndPublish(connect, responses);
-  //await connect.close();
+  const connect = await amqp.connect(MQ_URL);
+  await utils.connectToChannelAndPublish(connect, responses);
+  await connect.close();
 });

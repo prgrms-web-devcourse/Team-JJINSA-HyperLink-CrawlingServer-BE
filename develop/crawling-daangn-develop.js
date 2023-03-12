@@ -23,10 +23,11 @@ async function getHTML(year, month) {
 }
 
 async function main() {
+    var now = new Date();
     resultList = []
     for(let year = 2022; year <= 2023; year++) {
         for(let month = 1; month <= 12; month++) {
-            if(year == 2023 && month >= 3) break;
+            if(year == 2023 && month >= 4) break;
             const response = await getHTML(year, month);
             const $ = cheerio.load(response.data);
             // response ==> html

@@ -7,6 +7,7 @@ const MQ_URL = 'amqp://guest:guest@127.0.0.1';
 
 async function main() {
     resultList = []
+    // 추후, for문 제거하고 첫 페이지만 크롤링할 예정
     for(let pageNum = 1; pageNum <= 12; pageNum++) {
         console.log(pageNum);
         const response = await axios.get(
@@ -35,10 +36,9 @@ async function main() {
 }
 main()
 .then(async responses => {
-    console.log(resultList);
-    // const connect = await amqp.connect(MQ_URL);
+    const connect = await amqp.connect(MQ_URL);
 
-    // await utils.connectToChannelAndPublish(connect, responses);
+    await utils.connectToChannelAndPublish(connect, responses);
 
-    // await connect.close();
+    await connect.close();
 });

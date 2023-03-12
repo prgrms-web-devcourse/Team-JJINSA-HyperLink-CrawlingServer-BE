@@ -21,7 +21,7 @@ async function main() {
       resultList.push({
         title: elem.find('h3').text(),
         link: elem.children('a').attr('href'),
-        contentImgLink: elem.find('a span.imgBox img').attr('src'),
+        contentImgLink: elem.find('a span.imgBox img').attr('src') != undefined ? elem.find('a span.imgBox img').attr('src') : 'https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/creator-logo-image/logo_musinsa_creator.png',
         categoryName: 'beauty',
         creatorName: elem.find('div.info div.dateLine span.brand').text(),
       });
@@ -32,10 +32,9 @@ async function main() {
 }
 
 main().then(async (responses) => {
-  console.log(responses);
-  //const connect = await amqp.connect(MQ_URL);
+  const connect = await amqp.connect(MQ_URL);
 
-  //await utils.connectToChannelAndPublish(connect, responses);
+  await utils.connectToChannelAndPublish(connect, responses);
 
-  //await connect.close();
+  await connect.close();
 });
