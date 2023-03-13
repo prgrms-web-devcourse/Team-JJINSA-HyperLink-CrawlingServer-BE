@@ -12,13 +12,23 @@ const run = async () => {
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
             headless: true
         });
+        
+        await new Promise(r => setTimeout(r, 1000));
+
         const page = await browser.newPage();
+
+        await new Promise(r => setTimeout(r, 1000));
+
         const url = "https://www.youtube.com/@devbadak/videos";
         const youtubeDefaultURL = "https://www.youtube.com";
         const thumbnailDefaultURL = "https://i.ytimg.com/vi/";
         await page.goto(url);
+
+        await new Promise(r => setTimeout(r, 1000));
         
         const content = await page.content();
+
+        await new Promise(r => setTimeout(r, 1000));
 
         const $ = cheerio.load(content);
         
@@ -52,9 +62,10 @@ const run = async () => {
 
 run()
 .then(async responses => {
-    const connect = await amqp.connect(MQ_URL);
+    console.log(responses);
+    // const connect = await amqp.connect(MQ_URL);
 
-    await utils.connectToChannelAndPublish(connect, responses);
+    // await utils.connectToChannelAndPublish(connect, responses);
 
-    await connect.close();
+    // await connect.close();
 })
