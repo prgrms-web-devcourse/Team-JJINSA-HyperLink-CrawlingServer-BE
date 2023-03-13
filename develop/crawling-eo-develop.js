@@ -3,6 +3,8 @@ const puppeteer = require("puppeteer");
 const cheerio = require("cheerio");
 const amqp = require('amqplib');
 
+const MQ_URL = 'amqp://guest:guest@127.0.0.1';
+
 const run = async () => {
     resultList = [];
     try {
