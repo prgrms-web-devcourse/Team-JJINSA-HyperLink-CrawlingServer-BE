@@ -24,7 +24,7 @@ async function main() {
                 contentImgLink: 
                 $(elem).find("div.item-thumbnail-pc a img.thumbnail-image").attr("src") != undefined  ? 
                     "https://yozm.wishket.com" + $(elem).find("div.item-thumbnail-pc a img.thumbnail-image").attr("src") : 
-                    "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_sns_marketkurly.jpg",
+                    "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/creator-logo-image/logo_yozmit_creator.png",
                 categoryName: "develop",
                 creatorName: "요즘 IT"
             })
