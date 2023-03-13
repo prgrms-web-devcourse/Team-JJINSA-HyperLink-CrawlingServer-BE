@@ -6,7 +6,8 @@ const cheerio = require("cheerio");
 const MQ_URL = "amqp://guest:guest@127.0.0.1";
 
 async function main() {
-  const response = await axios.get("https://www.yna.co.kr/economy/all/1");
+  const response = await axios.get("http://www.yna.co.kr/economy/all/2");
+  console.log(response.data);
   const $ = cheerio.load(response.data);
   const $imgCon = $(".img-con");
   resultList = [];
@@ -31,11 +32,12 @@ async function main() {
 }
 
 main().then(async (responses) => {
-  const connect = await amqp.connect(MQ_URL);
+  console.log(responses);
+  // const connect = await amqp.connect(MQ_URL);
 
-  await utils.connectToChannelAndPublish(connect, responses);
+  // await utils.connectToChannelAndPublish(connect, responses);
 
-  await connect.close();
+  // await connect.close();
 });
 
 

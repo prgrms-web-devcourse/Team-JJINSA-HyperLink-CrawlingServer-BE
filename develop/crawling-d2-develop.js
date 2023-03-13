@@ -6,7 +6,7 @@ const MQ_URL = 'amqp://guest:guest@127.0.0.1';
 
 async function main() {
     const response = await axios.get(
-       "https://d2.naver.com/api/v1/contents?categoryId=&page=0&size=30"
+       "https://d2.naver.com/api/v1/contents?categoryId=&page=0&size=10"
     );
     // response.data => json data
     const elements = response.data.content;

@@ -7,7 +7,7 @@ const MQ_URL = 'amqp://guest:guest@127.0.0.1';
 async function main() {
   resultList = [];
 
-  for (let pageNum = 1; pageNum <= 12; pageNum++) {
+  for (let pageNum = 1; pageNum <= 1; pageNum++) {
     const response = await axios.get(
       `https://www.hani.co.kr/arti/economy/economy_general/list${pageNum}.html`
     );

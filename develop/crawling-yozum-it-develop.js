@@ -8,8 +8,7 @@ const MQ_URL = 'amqp://guest:guest@127.0.0.1';
 async function main() {
     resultList = []
     // 추후, for문 제거하고 첫 페이지만 크롤링할 예정
-    for(let pageNum = 1; pageNum <= 12; pageNum++) {
-        console.log(pageNum);
+    for(let pageNum = 1; pageNum <= 1; pageNum++) {
         const response = await axios.get(
             'https://yozm.wishket.com/magazine/list/develop/?page=' + pageNum
         );
