@@ -19,7 +19,7 @@ async function main() {
         console.log(new Date(Date.parse($(elem).find("span.e3wfjt70").text())).toDateString());
         resultList.push({
             title: $(elem).find("span.e3wfjt74").text(),
-            link: 'https://toss.tech/tech' +  $(elem).attr("href"),
+            link: 'https://toss.tech' +  $(elem).attr("href"),
             contentImgLink: 
                 $(elem).find("img").attr("srcset") != undefined  ? 
                 $(elem).find("img").attr("srcset").split(' ')[0] : 
