@@ -6,6 +6,8 @@ publishToChannel = async function(channel, {routingKey, exchangeName, data }) {
 
 exports.connectToChannelAndPublish = async function(connect, responses) {
     for(let i = 0; i < responses.length; i++) {
+        if(!responses[i].title || !responses[i].link && !responses[i].contentImgLink) continue;
+
         const channel = await connect.createConfirmChannel();
         console.log(responses[i]);
         publishToChannel(channel, {
