@@ -19,15 +19,18 @@ async function main() {
 
   resultList = [];
   $newsList.each((index, elem) => {
-    const $img = $(elem).find(".news span img");
     const $a = $(elem).find(".news");
+    const $img = $(elem).find(".news span img");
+    const onerror = $img.attr("onerror");
+    const isimgUrl = onerror.split("this.src=")[1];
+    const imgUrl = isimgUrl.replaceAll("'", "");
 
     resultList.push({
       title: $a.attr("title"),
       link: "https://news.sbs.co.kr/" + $a.attr("href"),
       contentImgLink:
-        $img.attr("src") != undefined
-          ? $img.attr("src")
+        isimgUrl != undefined
+          ? imgUrl
           : "https://hyperlink-data.s3.ap-northeast-2.amazonaws.com/content-default-image/logo_sbs_finance.png",
       categoryName: "finance",
       creatorName: "sbs 경제",
